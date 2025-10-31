@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Tax Act 2024 | Australian Government</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #313131;
+            background-color: #f4f4f4;
+        }
+
+        /* Government Header */
+        .gov-header {
+            background: linear-gradient(135deg, #002664 0%, #004ba0 100%);
+            color: white;
+            padding: 0;
+            border-bottom: 4px solid #FFD100;
+        }
+
+        .gov-banner {
+            background-color: #000;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .gov-banner .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #fff;
+        }
+
+        .main-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .coat-of-arms {
+            width: 80px;
+            height: 80px;
+            background: #FFD100;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #002664;
+        }
+
+        .site-title h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .site-title p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background-color: #003d82;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-bar li {
+            margin: 0;
+        }
+
+        .nav-bar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background-color: #002664;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: #004ba0;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .act-header {
+            border-bottom: 3px solid #FFD100;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .act-header h1 {
+            color: #002664;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .act-number {
+            color: #666;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        .alert-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #FFD100;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .alert-box h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .section h2 {
+            color: #002664;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .section h3 {
+            color: #004ba0;
+            font-size: 20px;
+            margin: 25px 0 15px 0;
+        }
+
+        .subsection {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .clause {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #004ba0;
+            border-radius: 4px;
+        }
+
+        .clause-number {
+            font-weight: bold;
+            color: #002664;
+            margin-bottom: 10px;
+        }
+
+        ul.legal-list {
+            list-style: none;
+            counter-reset: item;
+            margin: 20px 0;
+        }
+
+        ul.legal-list li {
+            counter-increment: item;
+            margin: 15px 0;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        ul.legal-list li:before {
+            content: "(" counter(item, lower-alpha) ")";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #004ba0;
+        }
+
+        .definition-box {
+            background-color: #e7f3ff;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .penalty-box {
+            background-color: #ffe6e6;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .penalty-box h4 {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .gov-footer {
+            background-color: #002664;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: #FFD100;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .important-notice {
+            background: linear-gradient(135deg, #FFD100 0%, #FFA500 100%);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 4px;
+            text-align: center;
+            color: #000;
+        }
+
+        .important-notice h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-bar ul {
+                flex-direction: column;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .act-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Government Banner -->
+    <div class="gov-header">
+        <div class="gov-banner">
+            <div class="container">
+                An Australian Government Website
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="logo-section">
+                <div class="coat-of-arms">🦘</div>
+                <div class="site-title">
+                    <h1>Dad Tax Authority</h1>
+                    <p>Department of Paternal Revenue</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#legislation">Legislation</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt;
+            <a href="#">Legislation</a> &gt;
+            <span>Dad Tax Act 2024</span>
+        </div>
+
+        <div class="main-content">
+            <div class="act-header">
+                <h1>Dad Tax Act 2024</h1>
+                <p class="act-number">Act No. 42 of 2024 as amended</p>
+                <p style="margin-top: 10px;">An Act relating to the taxation of confectionery, chocolates, and snack foods entering the household, and for related purposes</p>
+            </div>
+
+            <div class="important-notice">
+                <h3>⚠ MANDATORY COMPLIANCE REQUIRED</h3>
+                <p>All households are required to comply with Dad Tax provisions effective immediately</p>
+            </div>
+
+            <div class="alert-box">
+                <h3>Status: In Force</h3>
+                <p>This legislation came into effect on the date of Royal Assent and applies to all Australian households where a Dad is present.</p>
+            </div>
+
+            <!-- Part 1: Preliminary -->
+            <div class="section">
+                <h2>Part 1 — Preliminary</h2>
+
+                <div class="subsection">
+                    <h3>Section 1: Short Title</h3>
+                    <p>This Act may be cited as the <strong>Dad Tax Act 2024</strong>.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 2: Commencement</h3>
+                    <p>This Act commences on the day it receives Royal Assent and applies retrospectively to all previous instances of dads consuming children's snacks.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 3: Definitions</h3>
+                    <div class="definition-box">
+                        <p>In this Act, unless the contrary intention appears:</p>
+                        <ul class="legal-list">
+                            <li><strong>"Dad"</strong> means any paternal figure, including fathers, stepfathers, grandfathers, or persons acting in a paternal capacity within a household;</li>
+                            <li><strong>"Taxable Goods"</strong> means any chocolate, lollies, chips, biscuits, ice cream, or other confectionery or snack foods;</li>
+                            <li><strong>"Enter the Household"</strong> means the act of crossing the threshold of the primary residence, whether through the front door, back door, or any other point of entry;</li>
+                            <li><strong>"Small Portion"</strong> means a reasonable amount as determined solely by the Dad, generally interpreted as between 10-30% of the total goods;</li>
+                            <li><strong>"Children"</strong> means any offspring, stepchildren, grandchildren, or young persons under the care of the Dad;</li>
+                            <li><strong>"Immediate"</strong> means within a reasonable timeframe, not exceeding 2 hours from the time of entry into the household.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 2: Imposition of Dad Tax -->
+            <div class="section">
+                <h2>Part 2 — Imposition of Dad Tax</h2>
+
+                <div class="subsection">
+                    <h3>Section 4: Liability to Dad Tax</h3>
+                    <div class="clause">
+                        <div class="clause-number">4(1)</div>
+                        <p>A Dad Tax is hereby imposed on all Taxable Goods that enter the household.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">4(2)</div>
+                        <p>The Dad Tax must be collected immediately upon the Taxable Goods entering the household, or at such time as the Dad becomes aware of their presence.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">4(3)</div>
+                        <p>No person may consume Taxable Goods prior to the Dad Tax being collected, except with express written consent from the Dad.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 5: Mandatory Purposes of Dad Tax</h3>
+                    <p>The Dad Tax serves three (3) essential purposes, each of which is mandatory:</p>
+
+                    <div class="clause">
+                        <div class="clause-number">5(1) Purpose One: Safety Testing</div>
+                        <p>The Dad must consume a Small Portion of all Taxable Goods to ensure that:</p>
+                        <ul class="legal-list">
+                            <li>The goods are not poisoned, contaminated, or otherwise unsafe for consumption;</li>
+                            <li>The goods meet minimum quality standards as determined by the Dad;</li>
+                            <li>The goods are suitable for consumption by Children;</li>
+                            <li>No foreign objects or hazardous materials are present in the goods.</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><em>Note: This safety testing function is crucial and cannot be delegated or waived.</em></p>
+                    </div>
+
+                    <div class="clause">
+                        <div class="clause-number">5(2) Purpose Two: Paternal Nutrition</div>
+                        <p>The Dad Tax ensures that:</p>
+                        <ul class="legal-list">
+                            <li>The Dad receives adequate sustenance and remains properly fed;</li>
+                            <li>The Dad's blood sugar levels are maintained at optimal levels for household operations;</li>
+                            <li>The Dad's happiness and wellbeing are preserved through the consumption of treats;</li>
+                            <li>The Dad has sufficient energy to perform paternal duties including, but not limited to: fixing things, giving piggyback rides, and telling dad jokes.</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><em>Note: A happy Dad is essential to the proper functioning of the household.</em></p>
+                    </div>
+
+                    <div class="clause">
+                        <div class="clause-number">5(3) Purpose Three: Educational Function</div>
+                        <p>The Dad Tax provides essential education to Children regarding:</p>
+                        <ul class="legal-list">
+                            <li>The existence and operation of taxation systems in society;</li>
+                            <li>The principle that nothing in life is free;</li>
+                            <li>The concept of governmental (or paternal) authority;</li>
+                            <li>The understanding that contributing to the greater good (keeping Dad happy) benefits everyone;</li>
+                            <li>Preparation for real-world taxation that they will encounter as adults;</li>
+                            <li>The importance of sharing and thinking of others.</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><em>Note: This educational function is recognised as a valuable life lesson and character-building exercise.</em></p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 6: Rate of Tax</h3>
+                    <div class="clause">
+                        <div class="clause-number">6(1)</div>
+                        <p>The standard rate of Dad Tax shall be a Small Portion as defined in Section 3, with the exact amount to be determined by the Dad at his sole discretion.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">6(2)</div>
+                        <p>The Dad may apply a progressive tax rate, taking into account factors including but not limited to:</p>
+                        <ul class="legal-list">
+                            <li>The Dad's level of hunger;</li>
+                            <li>The desirability of the Taxable Goods;</li>
+                            <li>The quantity of Taxable Goods available;</li>
+                            <li>Recent behaviour of the Children;</li>
+                            <li>Whether it's been a long day;</li>
+                            <li>The Dad's favourite snacks receiving a higher rate of taxation.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 3: Compliance and Enforcement -->
+            <div class="section">
+                <h2>Part 3 — Compliance and Enforcement</h2>
+
+                <div class="subsection">
+                    <h3>Section 7: Obligations of Children</h3>
+                    <div class="clause">
+                        <div class="clause-number">7(1)</div>
+                        <p>Children must present all Taxable Goods to the Dad immediately upon entering the household.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">7(2)</div>
+                        <p>Children must not hide, conceal, or otherwise attempt to evade the Dad Tax.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">7(3)</div>
+                        <p>Children must wait patiently while the Dad conducts the necessary safety testing.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 8: Exemptions</h3>
+                    <div class="clause">
+                        <div class="clause-number">8(1)</div>
+                        <p>The following Taxable Goods may be exempt from Dad Tax at the Dad's discretion:</p>
+                        <ul class="legal-list">
+                            <li>Goods purchased for special occasions (birthdays, holidays) - subject to a reduced rate;</li>
+                            <li>Goods that the Dad finds unpalatable or undesirable;</li>
+                            <li>Goods that have been specifically pre-approved as exempt by the Dad in writing.</li>
+                        </ul>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">8(2)</div>
+                        <p>All exemptions must be approved by the Dad and may be revoked at any time without notice.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 9: Penalties for Non-Compliance</h3>
+                    <div class="penalty-box">
+                        <h4>Warning: Penalties Apply</h4>
+                        <div class="clause">
+                            <div class="clause-number">9(1)</div>
+                            <p>Failure to comply with the Dad Tax provisions may result in:</p>
+                            <ul class="legal-list">
+                                <li>Confiscation of all remaining Taxable Goods;</li>
+                                <li>A lecture about respect and following rules;</li>
+                                <li>Increased scrutiny of future Taxable Goods entering the household;</li>
+                                <li>Temporary suspension of privileges;</li>
+                                <li>Disappointed dad face;</li>
+                                <li>The phrase "I'm not angry, I'm just disappointed."</li>
+                            </ul>
+                        </div>
+                        <div class="clause">
+                            <div class="clause-number">9(2)</div>
+                            <p>Repeated or flagrant violations may result in the Dad eating ALL the good snacks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 10: Appeals Process</h3>
+                    <div class="clause">
+                        <div class="clause-number">10(1)</div>
+                        <p>Children may appeal decisions regarding Dad Tax to the Mum, however:</p>
+                        <ul class="legal-list">
+                            <li>The Mum may uphold the Dad Tax;</li>
+                            <li>The Mum may impose additional penalties;</li>
+                            <li>The Mum may institute a Mum Tax in addition to the Dad Tax;</li>
+                            <li>Appeals are not guaranteed to be successful.</li>
+                        </ul>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">10(2)</div>
+                        <p>The Dad's decision is final in all matters relating to taxation rates and safety testing procedures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 4: Miscellaneous -->
+            <div class="section">
+                <h2>Part 4 — Miscellaneous Provisions</h2>
+
+                <div class="subsection">
+                    <h3>Section 11: Multiple Dads</h3>
+                    <div class="clause">
+                        <div class="clause-number">11(1)</div>
+                        <p>In households with multiple persons qualifying as Dads, each Dad is entitled to collect Dad Tax independently.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">11(2)</div>
+                        <p>Dads may coordinate to avoid double taxation if they so choose, but are not required to do so.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 12: Visiting Friends' Houses</h3>
+                    <div class="clause">
+                        <div class="clause-number">12(1)</div>
+                        <p>When visiting another household, the host Dad's taxation authority takes precedence.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">12(2)</div>
+                        <p>Children should not expect exemptions when visiting friends' houses, as Dad Tax is universally applied across all Australian households.</p>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3>Section 13: Sunset Provisions</h3>
+                    <div class="clause">
+                        <div class="clause-number">13(1)</div>
+                        <p>This Act shall remain in force in perpetuity.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">13(2)</div>
+                        <p>The Act shall continue to apply even after Children reach adulthood, when visiting the family home.</p>
+                    </div>
+                    <div class="clause">
+                        <div class="clause-number">13(3)</div>
+                        <p>Upon becoming Dads themselves, former Children gain the authority to impose Dad Tax in their own households, thus perpetuating the sacred tradition.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="section">
+                <h2>Schedule 1 — Dad Tax Declaration</h2>
+                <div class="clause">
+                    <p style="font-style: italic; text-align: center; padding: 30px; background-color: #f8f9fa; border-radius: 4px; margin: 20px 0;">
+                        "By the power vested in Dads across the Commonwealth of Australia, let it be known that the Dad Tax is hereby declared just, necessary, and non-negotiable. May all Children understand that this Tax is levied not out of greed, but out of love, concern for safety, and a desire to teach valuable life lessons. So snacks it be."
+                    </p>
+                    <p style="text-align: right; margin-top: 20px; font-weight: bold;">
+                        — The Department of Paternal Revenue
+                    </p>
+                </div>
+            </div>
+
+            <div class="alert-box" style="margin-top: 40px;">
+                <h3>📋 Need More Information?</h3>
+                <p>For guidance on compliance, rate determinations, or to report tax evasion, please speak to your Dad directly. Office hours: whenever Dad is around.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gov-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">About the Dad Tax Authority</a></li>
+                        <li><a href="#">Our Purpose</a></li>
+                        <li><a href="#">History of Dad Tax</a></li>
+                        <li><a href="#">Annual Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Dad Tax Calculator</a></li>
+                        <li><a href="#">Compliance Guidelines</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Forms and Publications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Contact Your Dad</a></li>
+                        <li><a href="#">Regional Offices</a></li>
+                        <li><a href="#">Media Centre</a></li>
+                        <li><a href="#">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dad Tax Authority, Department of Paternal Revenue. All rights reserved.</p>
+                <p style="margin-top: 10px;">This is a parody website created for entertainment purposes. No actual legislation exists.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
